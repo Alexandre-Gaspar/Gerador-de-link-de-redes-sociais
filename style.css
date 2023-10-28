@@ -24,15 +24,9 @@ body *
 
 body 
 {
-  /*
-  background: url("assets/bg-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
-
   /* Using just one line */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 .light 
@@ -49,7 +43,7 @@ body
 #container 
 {
   width: 100%;
-  max-width: 588px;
+  max-width: 500px;
   padding: 0 24px;
   margin: 56px auto 0px;
 }
@@ -93,6 +87,13 @@ body
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-out .2s;
+  /*transition: outline .3s;*/
+}
+
+#switch button:hover
+{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span
@@ -109,8 +110,7 @@ body
 
 .light #switch button
 {
-  right: 0;
-  left: initial;
+  animation: slide-in .2s forwards;
 }
 
 /* Links */
@@ -190,5 +190,30 @@ footer
   .light
   {
     --bg-url: url(./assets/bg-desktop-light.jpg)
+  }
+}
+
+/* Criando animações */
+@keyframes slide-in
+{
+  from
+  {
+    left: 0;
+  }
+  to
+  {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out
+{
+  from
+  {
+    left: 50%;
+  }
+  to
+  {
+    left: 0;
   }
 }

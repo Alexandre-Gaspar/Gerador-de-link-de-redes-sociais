@@ -12,7 +12,9 @@ function alter_mode()
   if (light_mode.classList.contains('light'))
   {
     img_light.setAttribute('src', './assets/avatar-light.png');
+    img_light.setAttribute('alt', 'Foto de alguém sorrindo, usando óculos escuros e uma jaqueta preta, sem barba e fundo azul');
   } else {
     img_light.setAttribute('src', './assets/avatar.png');
+    img_light.setAttribute('alt', 'Foto de alguém sorrindo, usando óculos e camisa preta, barba e fundo amarelo');
   }
 }

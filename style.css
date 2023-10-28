@@ -8,12 +8,12 @@
 :root
 {
   --text-white: #fff;
-  --bg-url: url('assets/bg-mobile.jpg');
+  --bg-url: url(assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, .5);
   --surface-color: rgba(255, 255, 255, .1);
   --surface-color-hover: rgba(255, 255, 255, .05);
   --highlight-color: rgba(255, 255, 255, .2);
-  --switch-btn-svg: url('./assets/moon-stars.svg');
+  --switch-btn-svg: url(./assets/moon-stars.svg);
 }
 
 body * 
@@ -177,4 +177,18 @@ footer
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* Media queries */
+@media (min-width: 700px)
+{
+  :root
+  {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light
+  {
+    --bg-url: url(./assets/bg-desktop-light.jpg)
+  }
 }
